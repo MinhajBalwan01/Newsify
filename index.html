@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Newsify: Your Hub for Every Article and Blog!">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Newsify</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="./index.html" class="logo">Newsify</a>
+            <input type="search" autocomplete="off" spellcheck="false" placeholder="Search for news, blogs and much more" class="search" id="search">
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="header">
+            <div class="heading">
+                <h2 class="title">Top Headlines</h2>
+                <span class="results"></span>
+            </div>
+            <select id="sortFilter" aria-label="sort filter" aria-labelledby="sort filter" onchange="updateSortFilter()">
+                <option value="publishedAt" selected>Recent</option>
+                <option value="relevancy">Relevance</option>
+                <option value="popularity">Popular</option>
+            </select>
+        </div>
+        <section class="post-container"></section>
+
+        <div class="pagination">
+            <button title="Previous Page Button" id="prev">
+                <i class="ph-bold ph-caret-left"></i>
+                Prev
+            </button>
+            <button title="Next Page Button" aria-labelledby="Next Page Button" id="next">
+                Next
+                <i class="ph-bold ph-caret-right"></i>
+            </button>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
